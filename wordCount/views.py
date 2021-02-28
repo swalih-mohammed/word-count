@@ -39,12 +39,11 @@ def index(request):
         for key, value in word_dict.items():
             word_list.append((value, key))
 
-        # print(word_list)
-
         sorted_dict = sorted(
             word_dict.items(), key=operator.itemgetter(1), reverse=True)
 
         context = {'word_dict': sorted_dict}
+        print(word_dict)
     except:
         print("error")
         context = {}
