@@ -9,12 +9,12 @@ from .forms import URLForm
 def index(request):
     if request.method == 'POST':
         form = URLForm(request.POST or None)
-        # print(form.errors)
+        print(form.errors)
         if form.is_valid():
             url = form.cleaned_data["url"]
             # print(url)
     try:
-        # print("trying")
+        print("trying")
         # print(url)
         # url = "https://www.bbc.com/arabic"
         page = requests.get(url).text
