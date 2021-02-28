@@ -14,8 +14,8 @@ def index(request):
             url = form.cleaned_data["url"]
             # print(url)
     try:
-        print("trying")
-        # print(url)
+        # print("trying")
+        print(url)
         # url = "https://www.bbc.com/arabic"
         page = requests.get(url).text
         soup = BeautifulSoup(page, "lxml")
