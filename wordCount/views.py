@@ -43,7 +43,7 @@ def index(request):
             word_dict.items(), key=operator.itemgetter(1), reverse=True)
 
         context = {'word_dict': sorted_dict}
-        # print(word_dict)
+        print(word_dict)
     except:
         print("error in except")
         context = {}
